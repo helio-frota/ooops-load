@@ -9,7 +9,7 @@ Specific use case uploader
 > ts-node src/index.ts --h
 
 Usage:
-  npm start -- --url=<URL> --sourceDir=<DIR> [options]
+  npm start -- --e=<ENDPOINT> --s=<DIR> [options]
 
 Required:
   --e=<URL>    Endpoint (http://localhost:8080/api/v2/sbom or http://localhost:8080/api/v2/advisory)
@@ -22,7 +22,7 @@ Options:
 
 Example:
   npm start -- \
-    --u=http://localhost:8080/api/v2/sbom \
+    --e=http://localhost:8080/api/v2/sbom \
     --s=/home/user/Downloads/atlas-s3/sbom/spdx/ \
     --c=10 \
     --b=700 \

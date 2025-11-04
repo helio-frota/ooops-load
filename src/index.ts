@@ -8,7 +8,7 @@ const args = process.argv.slice(2);
 function showHelp() {
   console.log(`
 Usage:
-  npm start -- --url=<URL> --sourceDir=<DIR> [options]
+  npm start -- --e=<ENDPOINT> --s=<DIR> [options]
 
 Required:
   --e=<URL>    Endpoint (http://localhost:8080/api/v2/sbom or http://localhost:8080/api/v2/advisory)
@@ -21,7 +21,7 @@ Options:
 
 Example:
   npm start -- \\
-    --u=http://localhost:8080/api/v2/sbom \\
+    --e=http://localhost:8080/api/v2/sbom \\
     --s=/home/user/Downloads/atlas-s3/sbom/spdx/ \\
     --c=10 \\
     --b=700 \\
@@ -45,7 +45,7 @@ function getArg(name: string, defaultValue?: string): string {
   return defaultValue;
 }
 
-const URL = getArg('u');
+const URL = getArg('e');
 const SOURCE_DIR = getArg('s');
 const CONCURRENCY = parseInt(getArg('c', '4'), 10);
 const BATCH_SIZE = parseInt(getArg('b', '200'), 10);
