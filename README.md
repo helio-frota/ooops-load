@@ -12,7 +12,7 @@ Usage:
   npm start -- --e=<ENDPOINT> --s=<DIR> [options]
 
 Required:
-  --e=<URL>    Endpoint (http://localhost:8080/api/v2/sbom or http://localhost:8080/api/v2/advisory)
+  --e=<ENDPOINT>    Endpoint (http://localhost:8080/api/v2/sbom or http://localhost:8080/api/v2/advisory)
   --s=<DIR>    Source directory containing the JSON files (e.g. /home/foobar/myjsonfilesdir/)
 
 Options:
