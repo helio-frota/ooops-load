@@ -13,7 +13,7 @@ Usage:
 
 Required:
   --e=<ENDPOINT>    Endpoint (http://localhost:8080/api/v2/sbom or http://localhost:8080/api/v2/advisory)
-  --s=<DIR>    Source directory containing the JSON files (e.g. /home/foobar/myjsonfilesdir/)
+  --s=<DIR>    Source directory containing the JSON files (e.g. /home/user/myjsonfilesdir/)
 
 Options:
   --c=<N>      Concurrent uploads (default: 4)
@@ -23,7 +23,7 @@ Options:
 Example:
   npm start -- \
     --e=http://localhost:8080/api/v2/sbom \
-    --s=/home/user/Downloads/atlas-s3/sbom/spdx/ \
+    --s=/home/user/myjsonfilesdir/ \
     --c=10 \
     --b=700 \
 ```
