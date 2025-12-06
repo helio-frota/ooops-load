@@ -1,0 +1,21 @@
+[package]
+name = "ooops-load"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+tokio = { version = "1.48", features = ["full"] }
+reqwest = { version = "0.12.24", features = ["json", "gzip", "brotli", "deflate", "stream"] }
+clap = { version = "4.5", features = ["derive"] }
+futures = "0.3"
+indicatif = "0.18"
+anyhow = "1.0"
+url = "2.4"
+
+[profile.dev]
+debug = 0
+
+[profile.release]
+lto = true
+opt-level = 3
+codegen-units = 1
